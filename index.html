@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>js</title>
+     <style>
+     @import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Sixtyfour+Convergence&display=swap');
+     
+     body{
+       background-color: black;
+        
+     }
+     #di{
+       display:flex;
+       flex-direction: row;
+       justify-content: center;
+       justify-items: center;
+        
+     }
+       #di2{
+       display:flex;
+       flex-direction: row;
+       justify-content: center;
+       justify-items: center;
+        margin-top: 180px;
+     }
+     #btn{
+       border:1px black green;
+       color: black;
+       background-color: green;
+       width: 70px;
+       height: 30px;
+       border-radius: 10px;
+       
+     }
+      #btn:hover{
+       border:1px black green;
+       color: black;
+       background-color: yellow;
+       width: 70px;
+       height: 30px;
+       border-radius: 10px;
+       cursor: pointer;
+       
+     }
+       #di3{
+       display:flex;
+       flex-direction: row;
+       justify-content: center;
+       justify-items: center;
+        margin-top: 50px;
+     }
+     #h1{
+       text-align: center;
+       color: red;
+       font-family: "Kablammo", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 0;
+       
+     }
+      
+      #result{
+        color: red;
+        font-family: "Sixtyfour Convergence", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "BLED" 0,
+    "SCAN" 0,
+    "XELA" 0,
+    "YELA" 0;
+        
+      }
+         
+        
+     </style>
+  </head>
+  <body>
+      <h1 id="h1">Select your Dish..!</h1>
+      <div id="di">      
+      <select id="sel">
+        <option value="">select</option>
+        <option value="Biryani">Biryani<img src="https://as1.ftcdn.net/v2/jpg/04/41/20/18/1000_F_441201852_XQqp1wbAQj9udOC3iT7D0ahKgaf71bns.jpg" alt="rice"></option>
+         <option value="Mutton">Mutton<img src="https://as1.ftcdn.net/v2/jpg/02/04/61/82/1000_F_204618263_v6wWkUH1lmNr2O9qU1Dvd5BBWgrhqR2b.jpg" alt="mutton"></option>
+          <option value="Chicken">Chicken<img src="https://as1.ftcdn.net/v2/jpg/03/06/29/92/1000_F_306299289_wRoOzzAP3ndwipccdFm1JvzW7saxMQQ8.jpg" alt="chic"></option>
+           <option value="Chilli Chicken">Chilli Chicken<img src="https://as2.ftcdn.net/v2/jpg/03/10/63/39/1000_F_310633974_xcHPfkBkjOczQYlM0alwn8B8j5tZgZGT.jpg" alt="chic"></option>
+            <option value="Pizza">Pizza<img src="https://as1.ftcdn.net/v2/jpg/01/33/61/72/1000_F_133617244_dWdivRXwoLVzowl1kn3iFP9JGcuNd8n6.jpg" alt="pizza"></option>
+             <option value="Coke">Coke<img src="https://img.freepik.com/free-photo/fresh-cola-drink-glass_144627-16204.jpg?semt=ais_hybrid" alt="cocke"></option>
+              <option value="Beer">Beer<img src="https://img.freepik.com/free-photo/front-view-glasses-beer-with-wheat_23-2148755010.jpg?semt=ais_hybrid" alt="beer"></option>
+               <option value="Burger">Burger<img src="https://as2.ftcdn.net/v2/jpg/02/44/61/19/1000_F_244611927_yrh0ZIYwOGTDurVnCMAt7Cq8DR4sBkB0.jpg" alt="burger"></option>
+                <option value="Egg Omlet">Egg Omlet<img src="https://t4.ftcdn.net/jpg/07/67/78/31/240_F_767783141_SWel23jini7XHHWY1lXpJ5kPsiiDnTIc.jpg" alt="egg"></option>
+                 <option value="Fish fry">Fish fry<img src="https://t3.ftcdn.net/jpg/04/64/44/36/240_F_464443609_2wFobYdkMzKiaoHaHqnxR5BPhx6CUoKO.jpg" alt="pan"></option>
+                 
+      </select>
+       </div>
+       
+       <div id="di2">
+         <button id="btn" onclick="resultFunction()">Order</button>
+       </div>
+       
+       <div id="di3">
+         <h1 id="result">result here</h1>
+       </div>
+  </body>
+  
+  <script>
+    
+     function resultFunction(){
+      let order = document.getElementById("sel").value;
+      console.log(order);
+      
+      document.getElementById("result").innerText=order;
+    }
+  </script>
+</html>
